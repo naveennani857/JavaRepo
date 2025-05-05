@@ -1,4 +1,4 @@
-package com.ultron.basic_programs;
+package com.ultron.mini_game;
 
 import java.util.Random;
 import java.util.Scanner;
