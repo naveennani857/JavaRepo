@@ -1,8 +1,10 @@
 package com.ultron.in30Minutes;
 
 import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class CustomClass {
@@ -79,5 +81,78 @@ public class CustomClass {
                     .dropWhile(x -> x.getRating()>95)
                     .collect(Collectors.toList())                // collect the values to list
         ); 
+
+        System.out.println("max, min, findFirst, findAny");
+        /* max(comparator),min(comparator) : accepts the comparator returns optional
+         * findAny(),findFirst : find the elements from the stream based on their criteria
+        */
+       
+        System.out.println(
+                cources.stream()
+                        .filter(noOfStudentsPredicate)
+                        .max(sortingByNoOfStudents)
+        );
+
+        System.out.println(
+                cources.stream()
+                        .filter(noOfStudentsPredicate)
+                        .min(sortingByNoOfStudents)
+        );
+        System.out.println(
+                cources.stream()
+                        .filter(noOfStudentsPredicate)
+                        .findAny()
+        );
+        System.out.println(
+                cources.stream()
+                        .filter(noOfStudentsPredicate)
+                        .findFirst()
+        );
+        
+        System.out.println("sum, average and count");
+
+        System.out.println(
+                cources.stream()
+                        .filter(x -> x.getcourseType() == "Framework")
+                        .mapToInt(Courses::getNoOfStudents)
+                        .sum()
+        );
+
+         System.out.println(
+                cources.stream()
+                        .filter(x -> x.getcourseType() == "Framework")
+                        .mapToInt(Courses::getNoOfStudents)
+                        .average()
+        );
+         System.out.println(
+                cources.stream()
+                        .filter(x -> x.getcourseType() == "Framework")
+                        .mapToInt(Courses::getNoOfStudents)
+                        .count()
+        );
+
+        System.out.println("Grouping");
+
+        System.out.println(
+                cources.stream()
+                        .collect(Collectors.groupingBy(Courses::getcourseType))
+        );
+
+        System.out.println(
+                cources.stream()
+                        .collect(Collectors.groupingBy(Courses::getcourseType,Collectors.counting()))
+        );
+
+        System.out.println(
+                cources.stream()
+                        .collect(Collectors.groupingBy(Courses::getcourseType,
+                                Collectors.maxBy(Comparator.comparing(Courses::getRating))))
+        );
+         System.out.println(
+                cources.stream()
+                        .collect(Collectors.groupingBy(Courses::getcourseType,
+                                Collectors.mapping(Courses::getcourse, Collectors.toCollection(LinkedList::new))))
+        );
+
     }
 }
