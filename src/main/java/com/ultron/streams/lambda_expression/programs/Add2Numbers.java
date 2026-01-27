@@ -6,13 +6,15 @@ public class Add2Numbers {
     public static void main(String[] args) {
         int a = 2;
         double b = 5.8;
-        Add obj = (i, j) -> System.out.println(i + j);       // Lambda Expression
 
+        // Using custom functional interface
+        Add obj = (i, j) -> System.out.println(i + j);       // Lambda Expression
         obj.add(a, (int) b);
         // System.out.println(Add.str());
         // System.out.println(obj.defaultMethod(5,7));
 
-
+        
+        // Using inbuilt functional interface
         BiConsumer<Integer, Integer> bc = (c,d) -> System.out.println(d+c);
         bc.accept(67,8);                                                // inbuilt method
     }
