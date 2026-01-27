@@ -13,7 +13,7 @@ public class GreetingMain {
         greetMessage.greet();
 
         // Replying rep = new Replying() {           this can't work because the class
-        //     public void reply(){                     Replying is not present
+        //     public void reply(){                     "Replying" is not present
         //         System.out.println("Replying");
         //     }
         // };
