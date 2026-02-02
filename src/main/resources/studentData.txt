@@ -1,0 +1,10 @@
+101,Rahul Sharma,20,88.5
+102,Ananya Iyer,21,92.0
+103,Vikram Singh,19,75.4
+104,Priya Das,22,81.2
+105,Arjun Mehta,20,67.8
+106,Sneha Reddy,21,95.6
+107,Amit Verma,19,84.0
+108,Ishita Kapoor,20,79.5
+109,Karan Malhotra,22,72.3
+110,Meera Joshi,21,89.1
