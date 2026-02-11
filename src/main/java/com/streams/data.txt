@@ -1,0 +1,18 @@
+Java Stream is a way to process a collection of data one by one, in a clean and readable manner.
+
+👉 It does not store data
+👉 It processes data
+
+Real-life example 🧺
+Imagine you have a basket of apples 🍎🍎🍎
+You want to:
+Pick only red apples
+Remove damaged ones
+Count how many are left
+
+You don’t create a new basket manually for every step.
+You pass the basket through steps.
+
+That’s exactly what Stream does to data.
+
+Important point: A Stream is created from a collection, but it is NOT a collection itself.
