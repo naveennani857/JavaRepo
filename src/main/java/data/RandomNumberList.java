@@ -1,4 +1,4 @@
-package com.streams.entities;
+package data;
 
 import java.util.List;
 import java.util.Random;

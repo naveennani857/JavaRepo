@@ -1,5 +1,5 @@
 package com.streams.streamWithNumbers;
-import com.streams.entities.RandomNumberList;
+import data.RandomNumberList;
 
 import java.util.*;
 

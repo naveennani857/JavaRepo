@@ -1,11 +1,9 @@
 package com.streams.streamWithNumbers;
 
-import com.streams.entities.RandomNumberList;
+import data.RandomNumberList;
 
-import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /* Program to convert back List of Integers to Array */
 public class ConvertListToIntArray {
